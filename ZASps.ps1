@@ -91,7 +91,7 @@ while ($true) {
             
             foreach ($Mensaje in $NuevosMensajes) {
                 # Convertir la fecha UTC a hora local
-                $MsgTime = [DateTime]::Parse($Mensaje.date).ToLocalTime()
+                $MsgTime = ($Mensaje.date)
                 $TimeStr = $MsgTime.ToString("HH:mm:ss")
                 
                 if ($Mensaje.usr -eq $usr) {
@@ -187,3 +187,4 @@ while ($true) {
     }
     
 }
+
