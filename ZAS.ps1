@@ -92,7 +92,7 @@ while ($true) {
             foreach ($Mensaje in $NuevosMensajes) {
                 # Convertir la fecha UTC a hora local
                 $MsgTime = ($Mensaje.date)
-                $TimeStr = $MsgTime.ToString("HH:mm:ss")
+                $TimeStr = $MsgTime.ToString()
                 
                 if ($Mensaje.usr -eq $usr) {
                     Write-Host "[$TimeStr] YOU -> $($Mensaje.msg)" -ForegroundColor Cyan
@@ -187,4 +187,5 @@ while ($true) {
     }
     
 }
+
 
